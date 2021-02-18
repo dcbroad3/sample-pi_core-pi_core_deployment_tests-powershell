@@ -24,10 +24,12 @@ namespace OSIsoft.PISystemDeploymentTests
         public static string PIVisionServer => GetValue(Vision3Tests.KeySetting);
         public static string PIManualLogger => GetValue(ManualLoggerTests.KeySetting);
         public static int PIManualLoggerPort => GetIntegerValue(ManualLoggerTests.PortSetting, isRequired: true);
+        public static int EdgeDataStorePort => GetIntegerValue(PISystemDeploymentTests.EdgeDataStoreTests.PortSetting, isRequired: true);
         public static string PIManualLoggerSQL => GetValue(ManualLoggerTests.SQLSetting);
         public static string PIManualLoggerWebImpersonationUser => GetValue(ManualLoggerTests.ImpersonationUserSetting);
         public static bool PIDataLinkTests => GetBooleanValue(DataLinkAFTests.KeySetting);
         public static bool PISqlClientTests => GetBooleanValue(PISystemDeploymentTests.PISqlClientTests.KeySetting);
+        public static bool EdgeDataStoreTests => GetBooleanValue(PISystemDeploymentTests.EdgeDataStoreTests.KeySetting);
         public static bool SkipCertificateValidation => GetBooleanValue("SkipCertificateValidation");
 
         /// <summary>
